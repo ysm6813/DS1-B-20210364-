@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>Center Text</title>
+  <title>Choice Page</title>
 
   <style>
     body {
@@ -17,68 +17,147 @@
       background-color: white;
       color: black;
 
-      font-size: 50px;
-      font-weight: bold;
+      font-family: Arial, sans-serif;
       text-align: center;
     }
 
-    button {
-      margin-top: 40px;
-      padding: 15px 40px;
-      font-size: 30px;
+    .question {
+      font-size: 42px;
       font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    #countdown {
+      font-size: 70px;
+      font-weight: bold;
+      margin: 30px 0;
+    }
+
+    button {
+      display: block;
+
+      width: 500px;
+      height: 85px;
+
+      margin: 15px auto;
+
+      font-size: 28px;
+      font-weight: bold;
+
+      background-color: white;
+      color: black;
+
+      border: 3px solid black;
+
       cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #f2f2f2;
+    }
+
+    button.selected {
+      background-color: #7FBF7F;
+      border-color: #7FBF7F;
+      color: white;
+    }
+
+    .result-title {
+      font-size: 60px;
+      font-weight: bold;
+    }
+
+    .result-text {
+      font-size: 40px;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
   <div id="page">
-    <div>Can you tell us why you're entering this space in 3 seconds?</div>
-    <br><br>
+    <div class="question">
+      Why are you entering this space?
+    </div>
 
     <div id="countdown">3</div>
 
-    <br>
-    <button id="yesBtn">Yes</button>
+    <button onclick="selectChoice('class', this)">Class</button>
+    <button onclick="selectChoice('studio', this)">Studio Work</button>
+    <button onclick="selectChoice('meeting', this)">Meeting</button>
+    <button onclick="selectChoice('curious', this)">Just curious</button>
+    <button onclick="selectChoice('following', this)">Following someone</button>
   </div>
 
   <script>
     const page = document.getElementById("page");
     const countdown = document.getElementById("countdown");
-    const yesBtn = document.getElementById("yesBtn");
 
     let time = 3;
-    let clicked = false;
+    let selected = false;
 
     const timer = setInterval(() => {
       time--;
 
       if(time > 0){
         countdown.textContent = time;
-      } else {
+      }else{
         clearInterval(timer);
 
-        if(!clicked){
-          page.innerHTML = `
-            <div>Hmm.</div>
-            <br>
-            <div>If you can't think of a reason, maybe don't go in.</div>
-          `;
+        if(!selected){
+          showOutsiderResult();
         }
       }
     }, 1000);
 
-    yesBtn.addEventListener("click", () => {
-      clicked = true;
+    function selectChoice(choice, button){
+      if(selected) return;
+
+      selected = true;
       clearInterval(timer);
 
+      button.classList.add("selected");
+
+      setTimeout(() => {
+        if(
+          choice === "class" ||
+          choice === "studio" ||
+          choice === "meeting"
+        ){
+          showIDStudentResult();
+        }else{
+          showOutsiderResult();
+        }
+      }, 500);
+    }
+
+    function showIDStudentResult(){
       page.innerHTML = `
-        <div>Oh.</div>
-        <br>
-        <div>You are an ID student!</div>
+        <div class="result-title">Oh.</div>
+        <div class="result-text">
+          You must be an ID student.
+        </div>
+        <div class="result-text">
+          Welcome in.
+        </div>
       `;
-    });
+    }
+
+    function showOutsiderResult(){
+      page.innerHTML = `
+        <div class="result-title">Hmm.</div>
+        <div class="result-text">
+          If you're just curious
+        </div>
+        <div class="result-text">
+          or following someone,
+        </div>
+        <div class="result-text">
+          maybe this space isn't for you yet.
+        </div>
+      `;
+    }
   </script>
 </body>
 </html>
