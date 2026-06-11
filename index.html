@@ -9,20 +9,17 @@
       margin: 0;
       width: 100vw;
       min-height: 100vh;
-
       display: flex;
       justify-content: center;
       align-items: center;
-
       background-color: white;
       color: black;
-
       font-family: Arial, sans-serif;
       text-align: center;
     }
 
     #page {
-      max-width: 800px;
+      max-width: 850px;
       padding: 40px;
     }
 
@@ -30,30 +27,25 @@
       font-size: 42px;
       font-weight: bold;
       margin-bottom: 20px;
+      line-height: 1.25;
     }
 
     #countdown {
-      font-size: 70px;
+      font-size: 72px;
       font-weight: bold;
       margin: 30px 0;
     }
 
     button {
       display: block;
-
       width: 500px;
       height: 85px;
-
       margin: 15px auto;
-
       font-size: 28px;
       font-weight: bold;
-
       background-color: white;
       color: black;
-
       border: 3px solid black;
-
       cursor: pointer;
       transition: all 0.2s ease;
     }
@@ -74,9 +66,9 @@
     }
 
     .result-text {
-      font-size: 36px;
-      margin-top: 20px;
-      line-height: 1.4;
+      font-size: 34px;
+      margin-top: 22px;
+      line-height: 1.45;
     }
 
     .link-button {
@@ -91,17 +83,21 @@
     }
 
     @media (max-width: 600px) {
+      #page {
+        padding: 28px;
+      }
+
       .question {
         font-size: 30px;
       }
 
       #countdown {
-        font-size: 60px;
+        font-size: 62px;
       }
 
       button {
         width: 90vw;
-        height: 70px;
+        height: 72px;
         font-size: 22px;
       }
 
@@ -110,7 +106,7 @@
       }
 
       .result-text {
-        font-size: 28px;
+        font-size: 26px;
       }
     }
   </style>
@@ -147,7 +143,7 @@
         clearInterval(timer);
 
         if(!selected){
-          showOutsiderResult();
+          showUncertainResult();
         }
       }
     }, 1000);
@@ -161,28 +157,24 @@
       button.classList.add("selected");
 
       setTimeout(() => {
-        if(
-          choice === "class" ||
-          choice === "studio" ||
-          choice === "meeting"
-        ){
-          showIDStudentResult();
+        if(choice === "class" || choice === "studio" || choice === "meeting"){
+          showClearPurposeResult();
         }else{
-          showOutsiderResult();
+          showUncertainResult();
         }
       }, 500);
     }
 
-    function showIDStudentResult(){
+    function showClearPurposeResult(){
       page.innerHTML = `
         <div class="result-title">Oh.</div>
 
         <div class="result-text">
-          You must be an ID student.
+          You seem to have a clear reason for being here.
         </div>
 
         <div class="result-text">
-          You already know why you are here.
+          You must be an ID student.
         </div>
 
         <a href="protocol.html">
@@ -191,7 +183,7 @@
       `;
     }
 
-    function showOutsiderResult(){
+    function showUncertainResult(){
       page.innerHTML = `
         <div class="result-title">Hmm.</div>
 
@@ -201,8 +193,8 @@
         </div>
 
         <div class="result-text">
-          maybe this space is asking you<br>
-          to notice why you entered.
+          maybe this door is asking you<br>
+          to think once more before entering.
         </div>
 
         <a href="protocol.html">
