@@ -53,15 +53,23 @@
     }
 
     .photo {
-      width: 100%;
-      margin: 24px 0;
+      width: 700px;
+      height: 400px;
+
+      object-fit: cover;
+
       border: 2px solid black;
       display: block;
+
+      margin: 24px auto;
+
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     .caption {
       font-size: 15px;
       color: #555;
+      text-align: center;
       margin-top: -12px;
       margin-bottom: 30px;
     }
@@ -120,6 +128,11 @@
       button {
         width: 90vw;
         font-size: 22px;
+      }
+
+      .photo {
+        width: 100%;
+        height: 260px;
       }
     }
   </style>
