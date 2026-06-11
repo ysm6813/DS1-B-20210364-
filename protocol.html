@@ -14,14 +14,14 @@
     }
 
     .container {
-      max-width: 850px;
+      max-width: 880px;
       margin: 0 auto;
       padding: 60px 24px;
     }
 
     h1 {
       font-size: 48px;
-      line-height: 1.2;
+      line-height: 1.15;
       margin-bottom: 20px;
     }
 
@@ -44,7 +44,7 @@
     }
 
     .quote {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
       text-align: center;
       margin: 50px 0;
@@ -52,32 +52,30 @@
       border: 3px solid black;
     }
 
-    .image-box {
+    .photo {
       width: 100%;
-      height: 320px;
-      border: 3px dashed #999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #777;
-      font-size: 20px;
-      margin: 25px 0;
-      text-align: center;
+      margin: 24px 0;
+      border: 2px solid black;
+      display: block;
+    }
+
+    .caption {
+      font-size: 15px;
+      color: #555;
+      margin-top: -12px;
+      margin-bottom: 30px;
     }
 
     button {
       display: block;
-      width: 420px;
+      width: 430px;
       height: 80px;
       margin: 60px auto 20px auto;
-
       font-size: 26px;
       font-weight: bold;
-
       background-color: black;
       color: white;
       border: 3px solid black;
-
       cursor: pointer;
       transition: all 0.2s ease;
     }
@@ -116,16 +114,12 @@
       }
 
       .quote {
-        font-size: 22px;
+        font-size: 23px;
       }
 
       button {
         width: 90vw;
         font-size: 22px;
-      }
-
-      .image-box {
-        height: 240px;
       }
     }
   </style>
@@ -141,34 +135,36 @@
 
     <h2>Site</h2>
     <p>
-      The site is the entrance area of the Industrial Design space in N25.
-      It is a place that appears open, but is mostly used by people who already
-      have a reason to enter.
+      The site is the entrance to the Industrial Design space in N25.
+      Although the space is physically open, it is mostly used by people who already have a reason to be there.
+      Students pass through it naturally for class, studio work, or meetings, while visitors may enter out of curiosity or simply follow someone else.
     </p>
 
-    <div class="image-box">
-      <img src="Images/before.jpg" alt="Before Photo">
-    </div>
+    <img src="Images/before.jpg" alt="Before photo of the site" class="photo">
+    <div class="caption">Before: the entrance before the intervention.</div>
 
     <h2>Protocol</h2>
     <p>
-      The protocol of this site is not written on a sign.
-      People who belong to the space enter naturally and without hesitation.
-      They usually have a clear purpose: class, studio work, or a meeting.
+      The protocol of this site is invisible.
+      People who belong to the space rarely hesitate before entering.
+      They already know why they are there.
     </p>
 
     <p>
-      Others may enter because they are curious, or because they are following
-      someone else. In that case, the act of entering becomes uncertain.
-      The difference between belonging and not belonging appears in the moment
-      before entering.
+      For others, entering can be more uncertain.
+      They may be curious, or they may simply be following another person.
+      This difference is not written on a sign, but it appears in the small moment before passing through the door.
     </p>
 
     <h2>What I Wanted to Reveal</h2>
     <p>
-      I wanted to make this invisible protocol visible.
-      Instead of asking who is allowed to enter, I wanted to ask why someone is
-      entering.
+      I wanted to reveal the difference between purposeful entry and automatic entry.
+      Most people do not stop to think about why they are entering a space.
+      The decision is made unconsciously.
+    </p>
+
+    <p>
+      By asking a simple question at the moment of entry, I wanted to bring that invisible decision-making process to the surface.
     </p>
 
     <div class="quote">
@@ -177,63 +173,89 @@
 
     <h2>Gesture</h2>
     <p>
-      I added a digital intervention. When visitors open the webpage, they are
-      given three seconds to choose their reason for entering:
+      I added a QR code near the entrance with an arrow pointing toward it.
+      The arrow is not only a direction marker.
+      It is a small trigger for curiosity.
+      Why is the arrow pointing there?
+      What happens if the QR code is scanned?
     </p>
 
     <p>
-      Class / Studio Work / Meeting / Just curious / Following someone
+      After scanning the QR code, visitors see a webpage that asks them why they are entering the space.
+      They have only three seconds to answer.
     </p>
 
     <p>
-      If they choose Class, Studio Work, or Meeting, the page recognizes them as
-      someone who already belongs to the protocol of the space.
-      If they choose Just curious, Following someone, or fail to answer within
-      three seconds, the page reveals their uncertainty.
-    </p>
-
-    <h2>Why This Addition?</h2>
-    <p>
-      I did not want to block the entrance physically.
-      A barrier would change the function of the site too directly.
-      Instead, I used a short question and a timer to create a small moment of
-      self-awareness.
+      The available answers are:
+      Class, Studio Work, Meeting, Just curious, and Following someone.
     </p>
 
     <p>
-      The gesture is minimal. It does not stop people from entering.
-      It only asks them to recognize their reason for entering.
+      If the visitor chooses Class, Studio Work, or Meeting, the page responds as if they already have a clear reason to be there.
+      If they choose Just curious, Following someone, or fail to answer within three seconds, the page asks them to think once more before entering.
+    </p>
+
+    <img src="Images/after.jpg" alt="After photo of the intervention" class="photo">
+    <div class="caption">After: the QR code and arrow installed at the site.</div>
+
+    <h2>Why QR Code?</h2>
+    <p>
+      A normal “keep off” sign delivers its message immediately.
+      People read it, understand it, and either obey or ignore it.
+      I did not want to make a sign that simply tells people what to do.
+    </p>
+
+    <p>
+      The QR code works differently.
+      Before receiving the message, people first encounter the arrow and the code.
+      This creates a small gap of curiosity.
+      The message is not given automatically; the visitor has to choose to access it.
+    </p>
+
+    <p>
+      This extra step is important because the project is about interrupting an automatic action.
+      Many people enter the space quickly and without much thought.
+      The QR code slows that process down and creates a brief pause before entry.
+    </p>
+
+    <p>
+      In this way, the QR code is not just a delivery tool.
+      It is part of the gesture.
+      The arrow creates curiosity, the QR code creates participation, and the webpage creates reflection.
     </p>
 
     <h2>Impact</h2>
     <p>
-      The intervention created a short pause before entry.
-      Some people could immediately choose a clear reason.
-      Others hesitated, and that hesitation became the main evidence of the
-      protocol.
+      The intervention introduced a small pause into an otherwise automatic action.
+      Some people could answer immediately because their reason was already clear.
+      Others hesitated, ran out of time, or selected curiosity-based responses.
     </p>
 
     <p>
-      Through the webpage, the site became less automatic.
-      Entering became a decision rather than a habit.
+      That hesitation became evidence of the protocol itself.
+      The project does not prevent people from entering.
+      Instead, it gives them a brief and playful moment to notice why they are entering.
     </p>
 
-    <h2>Documentation</h2>
+    <img src="Images/interaction.jpg" alt="User interacting with the webpage" class="photo">
+    <div class="caption">Interaction: a visitor scanning or using the webpage at the site.</div>
 
-    <div class="image-box">
-      <img src="Images/after.jpg" alt="After Photo">
-    </div>
+    <h2>Reflection</h2>
+    <p>
+      The goal was not to decide who belongs.
+      The goal was to make people notice the reason they enter.
+    </p>
 
-    <div class="image-box">
-      <img src="Images/interaction.jpg" alt="Interaction Photo">
-    </div>
+    <p>
+      The protocol already existed.
+      The intervention simply made it visible.
+    </p>
 
     <h2>Experience</h2>
     <p>
       This webpage is not only documentation.
       It is part of the project itself.
-      Someone standing at the site can open the URL and experience the protocol
-      directly.
+      Someone standing at the site can open the URL and experience the protocol directly.
     </p>
 
     <a href="index.html">
