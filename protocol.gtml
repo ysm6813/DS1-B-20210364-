@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Protocol Project</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-top: 60px;
+      border-bottom: 2px solid black;
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 18px 0;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+
+    .quote {
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      margin: 50px 0;
+      padding: 40px 20px;
+      border: 3px solid black;
+    }
+
+    .image-box {
+      width: 100%;
+      height: 320px;
+      border: 3px dashed #999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #777;
+      font-size: 20px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    button {
+      display: block;
+      width: 420px;
+      height: 80px;
+      margin: 60px auto 20px auto;
+
+      font-size: 26px;
+      font-weight: bold;
+
+      background-color: black;
+      color: white;
+      border: 3px solid black;
+
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .small {
+      font-size: 16px;
+      color: #555;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .quote {
+        font-size: 22px;
+      }
+
+      button {
+        width: 90vw;
+        font-size: 22px;
+      }
+
+      .image-box {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Why Are You Entering This Space?</h1>
+
+    <div class="subtitle">
+      Project 4: Protocol
+    </div>
+
+    <h2>Site</h2>
+    <p>
+      The site is the entrance area of the Industrial Design space in N25.
+      It is a place that appears open, but is mostly used by people who already
+      have a reason to enter.
+    </p>
+
+    <div class="image-box">
+      Before photo of the site<br>
+      Replace this box with your image
+    </div>
+
+    <h2>Protocol</h2>
+    <p>
+      The protocol of this site is not written on a sign.
+      People who belong to the space enter naturally and without hesitation.
+      They usually have a clear purpose: class, studio work, or a meeting.
+    </p>
+
+    <p>
+      Others may enter because they are curious, or because they are following
+      someone else. In that case, the act of entering becomes uncertain.
+      The difference between belonging and not belonging appears in the moment
+      before entering.
+    </p>
+
+    <h2>What I Wanted to Reveal</h2>
+    <p>
+      I wanted to make this invisible protocol visible.
+      Instead of asking who is allowed to enter, I wanted to ask why someone is
+      entering.
+    </p>
+
+    <div class="quote">
+      Why are you entering this space?
+    </div>
+
+    <h2>Gesture</h2>
+    <p>
+      I added a digital intervention. When visitors open the webpage, they are
+      given three seconds to choose their reason for entering:
+    </p>
+
+    <p>
+      Class / Studio Work / Meeting / Just curious / Following someone
+    </p>
+
+    <p>
+      If they choose Class, Studio Work, or Meeting, the page recognizes them as
+      someone who already belongs to the protocol of the space.
+      If they choose Just curious, Following someone, or fail to answer within
+      three seconds, the page reveals their uncertainty.
+    </p>
+
+    <h2>Why This Addition?</h2>
+    <p>
+      I did not want to block the entrance physically.
+      A barrier would change the function of the site too directly.
+      Instead, I used a short question and a timer to create a small moment of
+      self-awareness.
+    </p>
+
+    <p>
+      The gesture is minimal. It does not stop people from entering.
+      It only asks them to recognize their reason for entering.
+    </p>
+
+    <h2>Impact</h2>
+    <p>
+      The intervention created a short pause before entry.
+      Some people could immediately choose a clear reason.
+      Others hesitated, and that hesitation became the main evidence of the
+      protocol.
+    </p>
+
+    <p>
+      Through the webpage, the site became less automatic.
+      Entering became a decision rather than a habit.
+    </p>
+
+    <h2>Documentation</h2>
+
+    <div class="image-box">
+      During / after photo<br>
+      Replace this box with your image
+    </div>
+
+    <div class="image-box">
+      User interacting with the webpage<br>
+      Replace this box with your image
+    </div>
+
+    <h2>Experience</h2>
+    <p>
+      This webpage is not only documentation.
+      It is part of the project itself.
+      Someone standing at the site can open the URL and experience the protocol
+      directly.
+    </p>
+
+    <a href="index.html">
+      <button>Experience the Protocol</button>
+    </a>
+
+    <div class="small">
+      Open this page at the site before entering.
+    </div>
+  </div>
+</body>
+</html>
