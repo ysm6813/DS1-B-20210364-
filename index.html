@@ -14,22 +14,71 @@
       justify-content: center;
       align-items: center;
 
-      background-color: white; /* 배경 흰색 */
-      color: black;            /* 글자 검은색 */
+      background-color: white;
+      color: black;
 
-      font-size: 50px;         /* 글자 크기 증가 */
-      font-weight: bold;       /* 굵게 */
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 15px 40px;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
-  <div>Can you tell us why you're entering this space in 3 seconds?<br><br><br>
-  3...<br>
-  2...<br>
-  1...<br><br>
-  Hmm.<br>
-  If you can't think of a reason, maybe don't go in.
+  <div id="page">
+    <div>Can you tell us why you're entering this space in 3 seconds?</div>
+    <br><br>
+
+    <div id="countdown">3</div>
+
+    <br>
+    <button id="yesBtn">Yes</button>
   </div>
+
+  <script>
+    const page = document.getElementById("page");
+    const countdown = document.getElementById("countdown");
+    const yesBtn = document.getElementById("yesBtn");
+
+    let time = 3;
+    let clicked = false;
+
+    const timer = setInterval(() => {
+      time--;
+
+      if(time > 0){
+        countdown.textContent = time;
+      } else {
+        clearInterval(timer);
+
+        if(!clicked){
+          page.innerHTML = `
+            <div>Hmm.</div>
+            <br>
+            <div>If you can't think of a reason, maybe don't go in.</div>
+          `;
+        }
+      }
+    }, 1000);
+
+    yesBtn.addEventListener("click", () => {
+      clicked = true;
+      clearInterval(timer);
+
+      page.innerHTML = `
+        <div>Oh.</div>
+        <br>
+        <div>You are an ID student!</div>
+      `;
+    });
+  </script>
 </body>
 </html>
